@@ -19,6 +19,8 @@ stop(_State) ->
 %% > It is not possible to trace on what is called "guard bifs", i.e. functions
 %%   in the erlang module that can be used in guards.
 
+%% Tracing NIFs work though. Probably ports too then.
+
 watch(M, F, A) ->
     recon_trace:calls({M, F, A}, 10).
 
